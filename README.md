@@ -12,3 +12,6 @@ git clone https://github.com/chrislevinecentric/CenSuite-BuilderIO-Starter.git
 DEV: npm run dev
 BUILD: npm run build
 ```
+
+## Builder.IO Documentation
+Please note, all guides must follow the [NextJS Specific Instructions](https://www.builder.io/c/docs/developers).
