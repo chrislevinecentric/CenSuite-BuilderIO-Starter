@@ -5,7 +5,7 @@ This starter will make it quick and easy to get started using [Builder.io](https
 ## Getting Started
 
 ```
-git clone https://github.com/chrislevinecentric/chrislevinecentric-CenSuite-Builder-Starter.git 
+git clone https://github.com/chrislevinecentric/CenSuite-BuilderIO-Starter.git
 ```
 
 ```
