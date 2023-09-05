@@ -1,21 +1,14 @@
-# Nextjs example
+# CenSuite NextJS + Builder.IO Starter
 
-## How to use
+This starter will make it quick and easy to get started using [Builder.io](https://builder.io).
 
-Download the example:
-
-```
-curl https://codeload.github.com/rsuite/rsuite/tar.gz/master | tar -xz --strip=2 rsuite-master/examples/with-nextjs
-cd with-nextjs
-```
-
-Install it and run:
+## Getting Started
 
 ```
-npm install
-npm run dev
-# or
-yarn
-yarn dev
+git clone https://github.com/chrislevinecentric/chrislevinecentric-CenSuite-Builder-Starter.git 
 ```
-# chrislevinecentric-CenSuite-Builder-Starter
+
+```
+DEV: npm run dev
+BUILD: npm run build
+```
