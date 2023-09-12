@@ -1,4 +1,9 @@
-import React from 'react';
-export default function Page2() {
-  return <div>Page2</div>;
+import { BuilderComponent } from "@builder.io/react";
+
+// IMPORTANT: import the file that you call Builder.registerComponent
+// anywhere you have <BuilderComponent />
+import "../builder-registry";
+
+export default function Page() {
+  return <BuilderComponent />;
 }
