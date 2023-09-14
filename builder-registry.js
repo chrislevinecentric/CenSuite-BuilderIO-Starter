@@ -24,10 +24,3 @@ Builder.registerComponent(
       "https://tabler-icons.io/static/tabler-icons/icons-png/3d-cube-sphere-off.png",
   }
 );
-
-Builder.registerComponent(
-  dynamic(() => import("./components/Heading")),
-  {
-    name: "Heading",
-  }
-);
