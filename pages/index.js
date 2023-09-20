@@ -9,9 +9,9 @@ const Home = () => (
       <title>Home</title>
     </Head>
 
-    <div className="hero">
-      <h1 className="title">Welcome to CenSuite</h1>
-      <p className="description">
+    <div style={{color: 'black', padding: 10}}>
+      <h1>Welcome to CenSuite</h1>
+      <p>
         A suite of enterprise-grade React components designed to provide a great user and developer experience.
       </p>
     </div>
