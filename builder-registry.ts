@@ -18,3 +18,10 @@ Builder.registerComponent(
     ],
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/AutoComplete/AutoComplete")),
+  {
+    name: "AutoComplete",
+  }
+);
