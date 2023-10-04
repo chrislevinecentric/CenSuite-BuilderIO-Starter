@@ -20,8 +20,22 @@ Builder.registerComponent(
 );
 
 Builder.registerComponent(
-  dynamic(() => import("./components/AutoComplete/AutoComplete")),
+  dynamic(() => import("./components/Badge/Badge")),
   {
-    name: "AutoComplete",
+    name: "Badge",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/BreadCrumb/Breadcrumb")),
+  {
+    name: "Breadcrumb",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Carousel/Carousel")),
+  {
+    name: "Carousel",
   }
 );

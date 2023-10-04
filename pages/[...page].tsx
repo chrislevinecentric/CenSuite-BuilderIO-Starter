@@ -8,7 +8,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 // Replace with your Public API Key
-builder.init("d9bf21ad952e48ecb0c8153446c2ec03");
+builder.init("fd620bcb08434eab914d0c52d5176e82");
 
 // Define a function that fetches the Builder
 // content for a given page
