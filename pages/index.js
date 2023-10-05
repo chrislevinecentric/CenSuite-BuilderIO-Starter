@@ -1,9 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import { Button } from 'rsuite';
-import Navbar from '../components/navbar';
+import React from "react";
+import Head from "next/head";
 
-import 'rsuite/styles/index.less';
+import "rsuite/styles/index.less";
 
 const Home = () => (
   <div>
@@ -11,33 +9,12 @@ const Home = () => (
       <title>Home</title>
     </Head>
 
-    <div className="hero">
-      <h1 className="title">Welcome to React Suite</h1>
-      <p className="description">
-        A suite of React components, intimate UI design, and a friendly development experience.
+    <div style={{color: 'black', padding: 10}}>
+      <h1>Welcome to CenSuite</h1>
+      <p>
+        A suite of enterprise-grade React components designed to provide a great user and developer experience.
       </p>
-      <hr />
-      <Navbar />
-      <hr />
-      <Button appearance="primary" href="https://rsuitejs.com/">
-        Getting started
-      </Button>
     </div>
-
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-        padding: 50px;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-    `}</style>
   </div>
 );
 

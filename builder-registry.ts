@@ -18,3 +18,24 @@ Builder.registerComponent(
     ],
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Badge/Badge")),
+  {
+    name: "Badge",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/BreadCrumb/Breadcrumb")),
+  {
+    name: "Breadcrumb",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Carousel/Carousel")),
+  {
+    name: "Carousel",
+  }
+);
