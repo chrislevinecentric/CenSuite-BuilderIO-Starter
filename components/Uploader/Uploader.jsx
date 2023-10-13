@@ -7,11 +7,11 @@ const Uploader = (props) => {
     <Uploader
       listType="picture-text"
       action="//jsonplaceholder.typicode.com/posts/"
-      renderFileInfo={(props.file, props.fileElement) => {
+      renderFileInfo={(file, fileElement) => {
         return (
           <>
-            <span>File Name: {props.file.name}</span>
-            <p>File URL: {props.file.url}</p>
+            <span>File Name: {file.name}</span>
+            <p>File URL: {file.url}</p>
           </>
         );
       }}
