@@ -4,7 +4,7 @@ export default function CenBadge(props) {
   return (
     <>
       {" "}
-      <Badge content={999}>
+      <Badge content={props.content}>
         <Button>{props.text}</Button>
       </Badge>
     </>

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const CenButton = (props) => {
   return (
     <>
-      <Button color="red" appearance="primary">
+      <Button color={props.color} appearance={props.appearance}>
         {props.text}
       </Button>
     </>

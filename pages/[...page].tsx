@@ -7,6 +7,7 @@ import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import "../builder-registry";
+import "rsuite/styles/index.less";
 
 // Replace with your Public API Key
 builder.init("fd620bcb08434eab914d0c52d5176e82");

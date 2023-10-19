@@ -13,8 +13,8 @@ Builder.registerComponent(
   {
     name: "Button",
     inputs: [
-      { name: "color", type: "string" },
-      { name: "appearance", type: "string" },
+      { name: "color", type: "text" },
+      { name: "appearance", type: "text" },
       { name: "text", type: "string" },
     ],
   }
@@ -126,7 +126,6 @@ Builder.registerComponent(
     inputs: [{ name: "placement", type: "string" }],
   }
 );
-
 // Builder.registerComponent(
 //   dynamic(() => import("./components/Dropdown/Dropdown")),
 //   {
@@ -299,5 +298,19 @@ Builder.registerComponent(
   dynamic(() => import("./components/navbar")),
   {
     name: "Navbar",
+  }
+);
+
+// Builder.registerComponent(
+//   dynamic(() => import("./components/Dropdown/Dropdown")),
+//   {
+//     name: "CenDropdown",
+//   }
+// );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Overlay/Overlay")),
+  {
+    name: "CenOverlay",
   }
 );
