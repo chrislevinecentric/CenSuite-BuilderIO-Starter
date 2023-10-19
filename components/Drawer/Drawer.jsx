@@ -1,6 +1,6 @@
 import React from "react";
 import { Drawer, ButtonToolbar, Button, IconButton, Placeholder } from "rsuite";
-export default function Drawer(props) {
+export default function CenDrawer(props) {
   const [open, setOpen] = React.useState(false);
   const [placement, setPlacement] = React.useState(props.placement);
 

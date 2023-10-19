@@ -1,9 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
 import { CheckPicker } from "rsuite";
 
-const Checkpicker = (props) => {
+const CenCheckpicker = (props) => {
   return (
     <>
       <CheckPicker
@@ -18,4 +16,4 @@ const Checkpicker = (props) => {
   );
 };
 
-export default Checkpicker;
+export default CenCheckpicker;

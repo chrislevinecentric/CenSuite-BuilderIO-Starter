@@ -1,9 +1,8 @@
 import { Radio, RadioGroup } from "rsuite";
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Radio = (props) => {
+const CenRadio = (props) => {
   return (
     <>
       <RadioGroup name="radioList">
@@ -20,4 +19,4 @@ const Radio = (props) => {
 
 // #endregion
 
-export default Radio;
+export default CenRadio;

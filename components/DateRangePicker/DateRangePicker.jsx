@@ -1,7 +1,7 @@
 import React from "react";
 import { DateRangePicker } from "rsuite";
 
-export default function DateRangePicker(props) {
+export default function CenDateRangePicker(props) {
   return (
     <DateRangePicker
       format={props.format}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, ButtonToolbar, Button, Input } from "rsuite";
 
-export default function Form(props) {
+export default function CenForm(props) {
   return (
     <>
       <Form fluid={props.fluid} layout={props.layout} readOnly={props.readOnly}>

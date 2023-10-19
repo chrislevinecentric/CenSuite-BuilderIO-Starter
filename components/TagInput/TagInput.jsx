@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { TagInput } from "rsuite";
 
-const TagInput = () => {
+const CenTagInput = () => {
   return (
     <TagInput
       trigger={["Enter", "Space", "Comma"]}
@@ -19,4 +18,4 @@ const TagInput = () => {
 
 // #endregion
 
-export default TagInput;
+export default CenTagInput;

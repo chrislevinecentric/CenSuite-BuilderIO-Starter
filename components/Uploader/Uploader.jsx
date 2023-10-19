@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Uploader } from "rsuite";
-const Uploader = (props) => {
+const CenUploader = (props) => {
   return (
     <Uploader
       listType="picture-text"
@@ -19,4 +18,4 @@ const Uploader = (props) => {
   );
 };
 
-export default Uploader;
+export default CenUploader;

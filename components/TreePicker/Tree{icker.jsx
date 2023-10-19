@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { TreePicker } from "rsuite";
-const TreePicker = (props) => {
+const CenTreePicker = (props) => {
   return (
     <>
       <ControlLabel>{props.label}</ControlLabel>
@@ -17,4 +16,4 @@ const TreePicker = (props) => {
   );
 };
 
-export default TreePicker;
+export default CenTreePicker;

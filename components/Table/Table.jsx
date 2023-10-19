@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "rsuite";
-const Table = (props) => {
+const CenTable = (props) => {
   const { Column, HeaderCell, Cell } = Table;
   return (
     <Table
@@ -22,4 +22,4 @@ const Table = (props) => {
   );
 };
 
-export default Table;
+export default CenTable;

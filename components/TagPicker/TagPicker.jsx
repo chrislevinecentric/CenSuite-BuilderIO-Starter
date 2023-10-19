@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { TagPicker } from "rsuite";
-const TagPicker = (props) => {
+const CenTagPicker = (props) => {
   return (
     <TagPicker
       creatable={props.creatable}
@@ -13,4 +12,4 @@ const TagPicker = (props) => {
   );
 };
 
-export default TagPicker;
+export default CenTagPicker;

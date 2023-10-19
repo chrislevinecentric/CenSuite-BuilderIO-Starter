@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Rate } from "rsuite";
-const Rate = (props) => {
+const CenRate = (props) => {
   const textStyle = {
     verticalAlign: "top",
     lineHeight: "42px",
@@ -17,4 +16,4 @@ const Rate = (props) => {
   );
 };
 
-export default Rate;
+export default CenRate;

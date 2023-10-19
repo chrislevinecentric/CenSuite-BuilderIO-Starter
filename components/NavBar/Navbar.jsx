@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Navbar = ({ onSelect, activeKey, ...props }) => {
+const CenNavbar = ({ onSelect, activeKey, ...props }) => {
   return (
     <Navbar {...props}>
       <Navbar.Brand href="#">RSUITE</Navbar.Brand>
@@ -23,4 +22,4 @@ const Navbar = ({ onSelect, activeKey, ...props }) => {
   );
 };
 
-export default Navbar;
+export default CenNavbar;

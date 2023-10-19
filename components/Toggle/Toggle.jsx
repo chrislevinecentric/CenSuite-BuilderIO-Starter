@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Toggle } from "rsuite";
-const Toggle = (props) => {
+const CenToggle = (props) => {
   return (
     <Toggle
       plaintext
@@ -13,4 +12,4 @@ const Toggle = (props) => {
   );
 };
 
-export default Toggle;
+export default CenToggle;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "rsuite";
 
-export default function Carousel(props) {
+export default function CenCarousel(props) {
   const [activeIndex, setActiveIndex] = useState(props.activeIndex);
   const [placement, setPlacement] = React.useState("bottom");
   const [shape, setShape] = React.useState("dot");

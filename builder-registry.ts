@@ -13,8 +13,9 @@ Builder.registerComponent(
   {
     name: "Button",
     inputs: [
-      { name: "color", type: "text" },
-      { name: "appearance", type: "text" },
+      { name: "color", type: "string" },
+      { name: "appearance", type: "string" },
+      { name: "text", type: "string" },
     ],
   }
 );
@@ -24,8 +25,8 @@ Builder.registerComponent(
   {
     name: "Badge",
     inputs: [
-      { name: "content", type: "text" },
-      { name: "text", type: "text" },
+      { name: "content", type: "string" },
+      { name: "text", type: "string" },
     ],
   }
 );
@@ -126,12 +127,12 @@ Builder.registerComponent(
   }
 );
 
-Builder.registerComponent(
-  dynamic(() => import("./components/Dropdown/Dropdown")),
-  {
-    name: "Dropdown",
-  }
-);
+// Builder.registerComponent(
+//   dynamic(() => import("./components/Dropdown/Dropdown")),
+//   {
+//     name: "Dropdown",
+//   }
+// );
 
 Builder.registerComponent(
   dynamic(() => import("./components/Form/Form")),

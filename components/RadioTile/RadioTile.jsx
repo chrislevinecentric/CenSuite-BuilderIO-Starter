@@ -1,10 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { RadioTile, RadioTileGroup } from "rsuite";
 import { Icon } from "@rsuite/icons";
 import { VscLock, VscWorkspaceTrusted, VscRepo } from "react-icons/vsc";
-const RadioTile = (prop) => {
+const CenRadioTile = (prop) => {
   return (
     <RadioTileGroup
       defaultValue={props.defaultValue}
@@ -23,4 +22,4 @@ const RadioTile = (prop) => {
   );
 };
 
-export default RadioTile;
+export default CenRadioTile;

@@ -1,9 +1,7 @@
 import { Button, IconButton, ButtonGroup, ButtonToolbar } from "rsuite";
 import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
 
-const ButtonGroup = (props) => {
+const CenButtonGroup = (props) => {
   return (
     <>
       <ButtonGroup>
@@ -15,8 +13,6 @@ const ButtonGroup = (props) => {
   );
 };
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
 // #endregion
 
 export default ButtonGroup;

@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Modal, Button, ButtonToolbar, Placeholder } from "rsuite";
 
-const Modal = (props) => {
+const CenModal = (props) => {
   const [open, setOpen] = useState(true);
   const handleClose = () => {
     props.eventHandlers.handleCancle();
@@ -37,4 +36,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal;
+export default CenModal;

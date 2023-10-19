@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Whisper, Button } from "rsuite";
 
-const Overlay = React.forwardRef(({ style, onClose, ...rest }, ref) => {
+const CenOverlay = React.forwardRef(({ style, onClose, ...rest }, ref) => {
   const styles = {
     ...style,
     color: "#000",
@@ -25,4 +25,4 @@ const Overlay = React.forwardRef(({ style, onClose, ...rest }, ref) => {
   );
 });
 
-export default Whisper;
+export default CenOverlay;

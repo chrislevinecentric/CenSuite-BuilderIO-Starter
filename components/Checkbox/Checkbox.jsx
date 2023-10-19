@@ -1,7 +1,7 @@
 import React from "react";
 import { Checkbox, CheckboxGroup } from "rsuite";
 
-export default function Checkbox(props) {
+export default function CenCheckbox(props) {
   return (
     <>
       {" "}

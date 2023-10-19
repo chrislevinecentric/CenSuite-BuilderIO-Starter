@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Loader, Placeholder } from "rsuite";
-const Loader = () => {
+const CenLoader = () => {
   return (
     <div>
       <Placeholder.Paragraph rows={8} />
@@ -11,4 +10,4 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export default CenLoader;

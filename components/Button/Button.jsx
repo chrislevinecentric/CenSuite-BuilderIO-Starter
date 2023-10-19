@@ -1,20 +1,15 @@
 import { Button, IconButton, ButtonGroup, ButtonToolbar } from "rsuite";
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Button = (props) => {
+const CenButton = (props) => {
   return (
     <>
-      <Button color={props.color} appearance={props.appearance}>
-        Default
+      <Button color="red" appearance="primary">
+        {props.text}
       </Button>
     </>
   );
 };
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
-// #endregion
-
-export default Button;
+export default CenButton;

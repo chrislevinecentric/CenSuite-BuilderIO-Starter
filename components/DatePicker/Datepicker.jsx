@@ -1,6 +1,6 @@
 import React from "react";
 import { DatePicker, Stack } from "rsuite";
-export default function Datepicker(props) {
+export default function CenDatepicker(props) {
   return (
     <Stack direction="column" alignItems="flex-start" spacing={6}>
       <DatePicker

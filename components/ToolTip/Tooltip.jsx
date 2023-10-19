@@ -1,9 +1,8 @@
 import { Tooltip, Whisper, Button } from "rsuite";
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Tooltip = (props) => {
+const CenTooltip = (props) => {
   return (
     <Whisper
       placement="top"
@@ -17,4 +16,4 @@ const Tooltip = (props) => {
 
 // #endregion
 
-export default Tooltip;
+export default CenTooltip;

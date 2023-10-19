@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Slider } from "rsuite";
-const Slider = (prop) => {
+const CenSlider = (prop) => {
   const [value, setValue] = React.useState(0);
   return (
     <div style={{ width: 200, marginLeft: 20 }}>
@@ -30,4 +29,4 @@ const Slider = (prop) => {
   );
 };
 
-export default Slider;
+export default CenSlider;

@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Pagination = (props) => {
+const CenPagination = (props) => {
   const [activePage, setActivePage] = React.useState(props.activePage);
   return (
     <Pagination
@@ -19,4 +18,4 @@ const Pagination = (props) => {
   );
 };
 
-export default Pagination;
+export default CenPagination;

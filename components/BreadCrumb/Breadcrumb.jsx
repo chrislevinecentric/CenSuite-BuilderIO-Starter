@@ -11,7 +11,7 @@ const NavLink = React.forwardRef((props, ref) => {
     </Link>
   );
 });
-const Breadcrumb = (props) => {
+const CenBreadcrumb = (props) => {
   return (
     <>
       {" "}
@@ -27,4 +27,4 @@ const Breadcrumb = (props) => {
     </>
   );
 };
-export default Breadcrumb;
+export default CenBreadcrumb;

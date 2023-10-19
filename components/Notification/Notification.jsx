@@ -1,7 +1,7 @@
 import { Notification, Placeholder } from "rsuite";
 import React from "react";
 
-const Notification = React.forwardRef(({ type, closable, ...rest }, ref) => {
+const CenNotification = React.forwardRef(({ type, closable, ...rest }, ref) => {
   return (
     <Notification
       closable={closable}
@@ -15,4 +15,4 @@ const Notification = React.forwardRef(({ type, closable, ...rest }, ref) => {
   );
 });
 
-export default Notification;
+export default CenNotification;
