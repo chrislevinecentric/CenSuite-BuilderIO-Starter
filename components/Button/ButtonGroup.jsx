@@ -6,7 +6,7 @@ const CenButtonGroup = (props) => {
     <>
       <ButtonGroup>
         <Button color={props.color} appearance={props.appearance}>
-          Default
+          {props.text}
         </Button>
       </ButtonGroup>
     </>
@@ -15,4 +15,4 @@ const CenButtonGroup = (props) => {
 
 // #endregion
 
-export default ButtonGroup;
+export default CenButtonGroup;

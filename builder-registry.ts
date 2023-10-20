@@ -5,6 +5,11 @@ Builder.registerComponent(
   dynamic(() => import("./components/Button/ButtonGroup")),
   {
     name: "ButtonGroup",
+    inputs: [
+      { name: "color", type: "text" },
+      { name: "appearance", type: "text" },
+      { name: "text", type: "string" },
+    ],
   }
 );
 
@@ -73,6 +78,7 @@ Builder.registerComponent(
     inputs: [
       { name: "disabled", type: "boolean" },
       { name: "checked", type: "boolean" },
+      { name: "text", type: "string" },
     ],
   }
 );
@@ -82,8 +88,10 @@ Builder.registerComponent(
   {
     name: "Checkpicker",
     inputs: [
-      { name: "disabled", type: "boolean" },
-      { name: "checked", type: "boolean" },
+      { name: "label", type: "string" },
+      { name: "size", type: "string" },
+      { name: "sticky", type: "boolean" },
+      // { name: "data", type: "list" },
     ],
   }
 );
