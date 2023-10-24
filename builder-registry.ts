@@ -91,7 +91,30 @@ Builder.registerComponent(
       { name: "label", type: "string" },
       { name: "size", type: "string" },
       { name: "sticky", type: "boolean" },
-      // { name: "data", type: "list" },
+      {
+        name: "data",
+        type: "list",
+        defaultValue: [
+          "Eugenia",
+          "Bryan",
+          "Linda",
+          "Nancy",
+          "Lloyd",
+          "Alice",
+          "Julia",
+          "Albert",
+          "Louisa",
+          "Lester",
+          "Lola",
+          "Lydia",
+          "Hal",
+          "Hannah",
+          "Harriet",
+          "Hattie",
+          "Hazel",
+          "Hilda",
+        ],
+      },
     ],
   }
 );
@@ -109,7 +132,10 @@ Builder.registerComponent(
     name: "Datepicker",
     inputs: [
       { name: "disabled", type: "boolean" },
-      { name: "checked", type: "boolean" },
+      { name: "readOnly", type: "boolean" },
+      { name: "format", type: "string" },
+      { name: "oneTap", type: "boolean" },
+      { name: "placeholder", type: "string" },
     ],
   }
 );

@@ -6,10 +6,9 @@ export default function CenDatepicker(props) {
       <DatePicker
         format={props.format}
         placeholder={props.placeholder}
-        calendarDefaultDate={props.defaultDate}
-        ranges={[]}
         readOnly={props.readOnly}
         disabled={props.disabled}
+        oneTap={props.oneTap}
       />
     </Stack>
   );

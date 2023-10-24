@@ -2,7 +2,7 @@ import React from "react";
 import { CheckPicker } from "rsuite";
 import { useState } from "react";
 const CenCheckpicker = (props) => {
-  console.log(props.data);
+  console.log("hellp how are you", props.data);
   // const data =
   //   props.data != null &&
   //   props.data.map((item) => ({
@@ -18,7 +18,7 @@ const CenCheckpicker = (props) => {
         style={{ width: 224 }}
         size={props.size}
         sticky={props.sticky}
-        disabledItemValues={props.disabledItemValues}
+        //   disabledItemValues={props.disabledItemValues}
       />
     </>
   );

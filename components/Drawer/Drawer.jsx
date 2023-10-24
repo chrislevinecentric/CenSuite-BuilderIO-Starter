@@ -5,19 +5,22 @@ export default function CenDrawer(props) {
   const [placement, setPlacement] = React.useState(props.placement);
 
   return (
-    <Drawer placement={placement} open={open} onClose={() => setOpen(false)}>
-      <Drawer.Header>
-        <Drawer.Title>Drawer Title</Drawer.Title>
-        <Drawer.Actions>
-          <Button onClick={() => setOpen(false)}>Cancel</Button>
-          <Button onClick={() => setOpen(false)} appearance="primary">
-            Confirm
-          </Button>
-        </Drawer.Actions>
-      </Drawer.Header>
-      <Drawer.Body>
-        <Placeholder.Paragraph rows={8} />
-      </Drawer.Body>
-    </Drawer>
+    <>
+      <Button onClick={() => setOpen(true)}>Open</Button>
+      <Drawer placement={placement} open={open} onClose={() => setOpen(false)}>
+        <Drawer.Header>
+          <Drawer.Title>Drawer Title</Drawer.Title>
+          <Drawer.Actions>
+            <Button onClick={() => setOpen(false)}>Cancel</Button>
+            <Button onClick={() => setOpen(false)} appearance="primary">
+              Confirm
+            </Button>
+          </Drawer.Actions>
+        </Drawer.Header>
+        <Drawer.Body>
+          <Placeholder.Paragraph rows={8} />
+        </Drawer.Body>
+      </Drawer>
+    </>
   );
 }
