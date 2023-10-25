@@ -18,9 +18,23 @@ Builder.registerComponent(
   {
     name: "Button",
     inputs: [
-      { name: "color", type: "text" },
-      { name: "appearance", type: "text" },
-      { name: "text", type: "string" },
+      {
+        name: 'text',
+        type: 'string',
+        defaultValue: 'Click me'
+      },
+      {
+        name: 'color',
+        type: 'string',
+        defaultValue: 'red',
+        enum: ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet'],
+      },
+      {
+        name: 'appearance',
+        type: 'string',
+        defaultValue: 'primary',
+        enum: ['primary', 'ghost', 'link', 'subtle', 'default'],
+      },
     ],
   }
 );
@@ -31,7 +45,12 @@ Builder.registerComponent(
     name: "Badge",
     inputs: [
       { name: "content", type: "string" },
-      { name: "text", type: "string" },
+      {
+        name: 'color',
+        type: 'string',
+        defaultValue: 'red',
+        enum: ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet'],
+      }
     ],
   }
 );
@@ -120,13 +139,6 @@ Builder.registerComponent(
 );
 
 Builder.registerComponent(
-  dynamic(() => import("./components/Counter/Counter")),
-  {
-    name: "Counter",
-  }
-);
-
-Builder.registerComponent(
   dynamic(() => import("./components/DatePicker/Datepicker")),
   {
     name: "Datepicker",
@@ -193,9 +205,18 @@ Builder.registerComponent(
   {
     name: "Message",
     inputs: [
-      { name: "type", type: "string" },
+      {
+        name: 'type',
+        type: 'string',
+        defaultValue: 'info',
+        enum: ['info', 'success', 'warning', 'error'],
+      },
+      { name: "showIcon", type: 'boolean'},
+      { name: "full", type: 'boolean'},
+      { name: "closable", type: 'boolean'},
       { name: "headerText", type: "string" },
       { name: "Message", type: "string" },
+    
     ],
   }
 );
@@ -206,8 +227,26 @@ Builder.registerComponent(
     name: "Modal",
     inputs: [
       { name: "modalTitle", type: "string" },
-      { name: "backdrop", type: "boolean" },
+      {
+        name: 'backdrop',
+        type: 'string',
+        defaultValue: 'true',
+        enum: ['static', 'true', 'false'],
+      },
       { name: "overflow", type: "boolean" },
+      {
+        name: 'color',
+        type: 'string',
+        defaultValue: 'red',
+        enum: ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet'],
+      },
+      {
+        name: 'appearance',
+        type: 'string',
+        defaultValue: 'primary',
+        enum: ['primary', 'ghost', 'link', 'subtle', 'default'],
+      },
+      { name: "text", type: "string" },
     ],
   }
 );
@@ -335,6 +374,18 @@ Builder.registerComponent(
   dynamic(() => import("./components/Notification/Notification")),
   {
     name: "Notification",
+    inputs: [
+      {
+        name: 'type',
+        type: 'string',
+        defaultValue: 'info',
+        enum: ['info', 'success', 'warning', 'error'],
+      },
+      { name: "closable", type: 'boolean'},
+      { name: "headerText", type: "string" },
+      { name: "Message", type: "string" },
+    
+    ],
   }
 );
 

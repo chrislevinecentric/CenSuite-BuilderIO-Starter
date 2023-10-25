@@ -10,7 +10,7 @@ import "../builder-registry";
 import "rsuite/styles/index.less";
 
 // Replace with your Public API Key
-builder.init("fd620bcb08434eab914d0c52d5176e82");
+builder.init("5e0a7b9cb20b4003aea2db2057547b23");
 
 // Define a function that fetches the Builder
 // content for a given page

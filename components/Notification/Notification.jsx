@@ -1,18 +1,12 @@
 import { Notification, Placeholder } from "rsuite";
 import React from "react";
 
-const CenNotification = React.forwardRef(({ type, closable, ...rest }, ref) => {
-  return (
-    <Notification
-      closable={closable}
-      ref={ref}
-      {...rest}
-      type={type}
-      header={type}
-    >
-      <Placeholder.Paragraph style={{ width: 320 }} rows={3} />
+const CenNotification = (props) => {
+  return (    
+    <Notification placement={props.showIcon} closable={props.closable} type={props.type} header={props.headerText}>
+      {props.Message}
     </Notification>
   );
-});
+};
 
 export default CenNotification;

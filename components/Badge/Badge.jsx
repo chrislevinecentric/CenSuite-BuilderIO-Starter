@@ -1,10 +1,10 @@
 import React from "react";
-import { Badge, Button } from "rsuite";
+import { Badge } from "rsuite";
 export default function CenBadge(props) {
   return (
     <>
-      <Badge content={props.content}>
-        <Button>{props.text}</Button>
+      <Badge color={props.color} content={props.content}>
+        <span></span>
       </Badge>
     </>
   );

@@ -9,7 +9,13 @@ const CenModal = (props) => {
   return (
     <>
       <ButtonToolbar>
-        <Button onClick={handleOpen}> Open</Button>
+        <Button
+          color={props.color}
+          appearance={props.appearance}
+          onClick={handleOpen}
+        >
+          {props.text}
+        </Button>
       </ButtonToolbar>{" "}
       <Modal
         size={props.size}
