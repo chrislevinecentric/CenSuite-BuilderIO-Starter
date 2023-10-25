@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Modal, Button, ButtonToolbar, Placeholder } from "rsuite";
-
+import { useState } from "react";
 const CenModal = (props) => {
-  const [open, setOpen] = useState(true);
-  const handleClose = () => {
-    props.eventHandlers.handleCancle();
-  };
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
-      {" "}
+      <ButtonToolbar>
+        <Button onClick={handleOpen}> Open</Button>
+      </ButtonToolbar>{" "}
       <Modal
         size={props.size}
         open={open}
@@ -25,10 +26,10 @@ const CenModal = (props) => {
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={handleClose} appearance="primary">
-            {props.text ? props.text : Ok}
+            {props.text ? props.text : "Ok"}
           </Button>
           <Button onClick={handleClose} appearance="subtle">
-            {props.text ? props.text : Cancel}
+            {props.text ? props.text : "Cancel"}
           </Button>
         </Modal.Footer>
       </Modal>

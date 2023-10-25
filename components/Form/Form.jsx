@@ -21,7 +21,7 @@ export default function CenForm(props) {
   console.log("check if", formElement);
   return (
     <>
-      <Form fluid>
+      {/* <Form fluid>
         <Form.Group controlId="name">
           <Form.ControlLabel>Username</Form.ControlLabel>
           <Form.Control name="name" />
@@ -32,23 +32,22 @@ export default function CenForm(props) {
           <Form.Control name="email" type="email" />
           <Form.HelpText>Required</Form.HelpText>
         </Form.Group>
-      </Form>
+      </Form> */}
       {/* <Form fluid={props.fluid} layout={props.layout} readOnly={props.readOnly}> */}
       <Form fluid>
-        {formElement &&
-          formElement.map((element) => {
-            console.log(
-              "doing teststing here",
-              element.name,
-              element.text,
-              element.type
-            );
-            <Form.Group controlId="name">
-              <Form.ControlLabel>Username</Form.ControlLabel>
-              <Form.Control name="name" />
-              <Form.HelpText>Required</Form.HelpText>
-            </Form.Group>;
-          })}
+        {formElement.map((element) => {
+          console.log(
+            "doing teststing here",
+            element.name,
+            element.text,
+            element.type
+          );
+          <Form.Group controlId={element.name}>
+            <Form.ControlLabel>Username</Form.ControlLabel>
+            <Form.Control name={element.name} />
+            <Form.HelpText>Required</Form.HelpText>
+          </Form.Group>;
+        })}
       </Form>
     </>
   );

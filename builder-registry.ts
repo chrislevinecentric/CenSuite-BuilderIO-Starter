@@ -192,6 +192,11 @@ Builder.registerComponent(
   dynamic(() => import("./components/Message/Message")),
   {
     name: "Message",
+    inputs: [
+      { name: "type", type: "string" },
+      { name: "headerText", type: "string" },
+      { name: "Message", type: "string" },
+    ],
   }
 );
 
@@ -199,6 +204,11 @@ Builder.registerComponent(
   dynamic(() => import("./components/Modal/Modal")),
   {
     name: "Modal",
+    inputs: [
+      { name: "modalTitle", type: "string" },
+      { name: "backdrop", type: "boolean" },
+      { name: "overflow", type: "boolean" },
+    ],
   }
 );
 
@@ -220,6 +230,11 @@ Builder.registerComponent(
   dynamic(() => import("./components/ToolTip/Tooltip")),
   {
     name: "Tooltip",
+    inputs: [
+      { name: "trigger", type: "string" },
+      { name: "text", type: "string" },
+      { name: "buttonText", type: "string" },
+    ],
   }
 );
 
@@ -227,6 +242,7 @@ Builder.registerComponent(
   dynamic(() => import("./components/Toggle/Toggle")),
   {
     name: "Toggle",
+    inputs: [{ name: "checkecText", type: "string" }],
   }
 );
 
@@ -311,6 +327,7 @@ Builder.registerComponent(
   dynamic(() => import("./components/Pagination/Pagination")),
   {
     name: "Pagination",
+    inputs: [{ name: "activePage", type: "string" }],
   }
 );
 
