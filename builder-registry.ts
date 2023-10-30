@@ -1,18 +1,14 @@
 import { Builder } from "@builder.io/react";
 import dynamic from "next/dynamic";
 
-Builder.registerComponent(
-  dynamic(() => import("./components/Button/ButtonGroup")),
-  {
-    name: "ButtonGroup",
-    inputs: [
-      { name: "color", type: "text" },
-      { name: "appearance", type: "text" },
-      { name: "text", type: "string" },
-    ],
-  }
-);
+// Self contained components
+import CenButtonGroup from "./components/Button/ButtonGroup"
+import CenRadioGroup from "./components/RadioTile/RadioTile"
 
+CenButtonGroup;
+CenRadioGroup;
+
+// Simple components
 Builder.registerComponent(
   dynamic(() => import("./components/Button/Button")),
   {
@@ -34,6 +30,14 @@ Builder.registerComponent(
         type: 'string',
         defaultValue: 'primary',
         enum: ['primary', 'ghost', 'link', 'subtle', 'default'],
+      },
+      {
+        name: 'loading',
+        type: 'boolean',
+      },
+      {
+        name: 'block',
+        type: 'boolean',
       },
     ],
   }
@@ -331,13 +335,6 @@ Builder.registerComponent(
   dynamic(() => import("./components/Rate/Rate")),
   {
     name: "Rate",
-  }
-);
-
-Builder.registerComponent(
-  dynamic(() => import("./components/RadioTile/RadioTile")),
-  {
-    name: "RadioTile",
   }
 );
 

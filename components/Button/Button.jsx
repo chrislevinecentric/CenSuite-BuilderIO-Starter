@@ -1,15 +1,12 @@
-import { Button, IconButton, ButtonGroup, ButtonToolbar } from "rsuite";
+import { Button } from "rsuite";
 import React from "react";
-import PropTypes from "prop-types";
 
 const CenButton = (props) => {
-  console.log("Button Props", props.color, props.appearance, props.text);
   return (
     <>
-      <Button color={props.color} appearance={props.appearance}>
+      <Button color={props.color} block={props.block} appearance={props.appearance} loading={props.loading} disabled={props.disabled} href={props.link}>
         {props.text}
       </Button>
-
     </>
   );
 };
