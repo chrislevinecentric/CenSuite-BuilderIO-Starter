@@ -30,38 +30,4 @@ function CenCarousel(props) {
   );
 }
 
-Builder.registerComponent(CenCarousel, {
-  name: "Carousel",
-  inputs: [
-    {
-      name: "autoplay",
-      type: "boolean",
-    },
-    {
-      name: "shape",
-      type: "string",
-      defaultValue: "dot",
-      enum: ["dot", "bar"],
-    },
-    {
-      name: "placement",
-      type: "string",
-      defaultValue: "md",
-      enum: ["top", "bottom", "left", "right"],
-    },
-    {
-      name: "slides",
-      type: "list",
-      subFields: [
-        {
-          name: "image",
-          type: "file",
-          allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-        },
-      ],
-      defaultValue: [],
-    },
-  ],
-});
-
 export default CenCarousel;
