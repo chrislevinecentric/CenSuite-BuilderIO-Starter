@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Panel, PanelGroup, Placeholder } from "rsuite";
 const CenPanel = (props) => {
   return (

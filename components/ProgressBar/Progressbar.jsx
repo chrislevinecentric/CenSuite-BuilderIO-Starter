@@ -7,14 +7,18 @@ export default function Progressbar(props) {
       {props.type == progressBarType.LINE ? (
         <Progress.Line
           percent={props.percent}
-          strokeColor={props.color}
+          strokeColor={props.strokeColor}
           vertical={props.vertical}
+          status={props.status}
+          strokeWidth={props.strokeWidth}
         />
       ) : (
         <Progress.Circle
           percent={props.percent}
-          strokeColor={props.color}
+          strokeColor={props.strokeColor}
           vertical={props.vertical}
+          status={props.status}
+          strokeWidth={props.strokeWidth}
         />
       )}
     </>

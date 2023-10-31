@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Pagination } from "rsuite";
 const CenPagination = (props) => {
   const [activePage, setActivePage] = React.useState(props.activePage);

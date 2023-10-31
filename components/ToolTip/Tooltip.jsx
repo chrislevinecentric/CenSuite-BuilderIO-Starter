@@ -1,6 +1,5 @@
 import { Tooltip, Whisper, Button } from "rsuite";
 import React from "react";
-import PropTypes from "prop-types";
 
 const CenTooltip = (props) => {
   return (

@@ -2,11 +2,7 @@ import { Builder } from "@builder.io/react";
 import dynamic from "next/dynamic";
 import CenForm from "./components/Form/Form";
 // Self contained components
-import CenButtonGroup from "./components/Button/ButtonGroup";
-import CenRadioGroup from "./components/RadioTile/RadioTile";
 import CenTable from "./components/Table/Table";
-CenButtonGroup;
-CenRadioGroup;
 CenForm;
 CenTable;
 
@@ -318,12 +314,63 @@ Builder.registerComponent(
     ],
   }
 );
-
 Builder.registerComponent(
   dynamic(() => import("./components/Drawer/Drawer")),
   {
     name: "Drawer",
-    inputs: [{ name: "placement", type: "string" }],
+    inputs: [
+      {
+        name: "bodyCopy",
+        type: "string",
+        defaultValue: "Click me",
+      },
+      {
+        name: "drawerTitle",
+        type: "string",
+        defaultValue: "Hello World!",
+      },
+      {
+        name: "placement",
+        type: "string",
+        defaultValue: "right",
+        enum: ["top", "bottom", "right", "left"],
+      },
+      {
+        name: "size",
+        type: "string",
+        defaultValue: "lg",
+        enum: ["full", "lg", "md", "xs"],
+      },
+      {
+        name: "autoFocus",
+        type: "boolean",
+      },
+      {
+        name: "text",
+        type: "string",
+        defaultValue: "Click me",
+      },
+      {
+        name: "color",
+        type: "string",
+        defaultValue: "red",
+        enum: ["red", "orange", "yellow", "green", "cyan", "blue", "violet"],
+      },
+      {
+        name: "appearance",
+        type: "string",
+        defaultValue: "primary",
+        enum: ["primary", "ghost", "link", "subtle", "default"],
+      },
+      {
+        name: "loading",
+        type: "boolean",
+      },
+      {
+        name: "block",
+        type: "boolean",
+      },
+    ],
   }
 );
 // Builder.registerComponent(
@@ -488,24 +535,36 @@ Builder.registerComponent(CenTable, {
   name: "CenTable",
   inputs: [
     {
-      name: "tabledata",
-      type: "list",
-      subFields: [
-        {
-          name: "columnname",
-          type: "string",
-        },
-        {
-          name: "datakey",
-          type: "string",
-        },
-      ],
-      defaultValue: [
-        {
-          label: "input",
-          content: [],
-        },
-      ],
+      name: "virtualized",
+      type: "boolean",
+    },
+    {
+      name: "fillHeight",
+      type: "boolean",
+    },
+    {
+      name: "bordered",
+      type: "boolean",
+    },
+    {
+      name: "autoHeight",
+      type: "boolean",
+    },
+    {
+      name: "showHeader",
+      type: "boolean",
+      defaultValue: "showHeader"
+    },
+    {
+      name: "hover",
+      type: "boolean",
+      defaultValue: ""
+    },
+    {
+      name: "wordWrap",
+      type: "string",
+      defaultValue: "false",
+      enum: ["break-all", "break-word", "keep-all"],
     },
   ],
 });
@@ -515,11 +574,52 @@ Builder.registerComponent(
     name: "Slider",
   }
 );
-
 Builder.registerComponent(
   dynamic(() => import("./components/SelectPicker/SelectPicker")),
   {
     name: "SelectPicker",
+    inputs: [
+      {
+        name: "blocks",
+        type: "boolean",
+      },
+      {
+        name: "searchable",
+        type: "boolean",
+      },
+      {
+        name: "appearance",
+        type: "string",
+        enum: ["default", "subtle"],
+        defaultValue: 'default'
+      },
+      {
+        name: "size",
+        type: "string",
+        defaultValue: "md",
+        enum: ["xs", "sm", "md", "lg"],
+      },
+      {
+        name: "placement",
+        type: "string",
+        enum: [
+          'bottomStart',
+          'bottomEnd',
+          'topStart',
+          'topEnd',
+          'leftStart',
+          'leftEnd',
+          'rightStart',
+          'rightEnd',
+          'auto',
+          'autoVerticalStart',
+          'autoVerticalEnd',
+          'autoHorizontalStart',
+          'autoHorizontalEnd',
+        ],        
+        defaultValue: 'bottomStart'
+      },
+    ]
   }
 );
 
@@ -527,6 +627,27 @@ Builder.registerComponent(
   dynamic(() => import("./components/Rate/Rate")),
   {
     name: "Rate",
+    inputs: [
+      {
+        name: "defaultValue",
+        type: "number",
+        defaultValue: "4",
+      },
+      { name: "vertical", type: "boolean" },
+      { name: "character", type: "string" },
+      {
+        name: "size",
+        type: "string",
+        defaultValue: "md",
+        enum: ["xs", "sm", "md", "lg"],
+      },
+      {
+        name: "color",
+        type: "string",
+        defaultValue: "red",
+        enum: ["red", "orange", "yellow", "green", "cyan", "blue", "violet"],
+      },
+    ],
   }
 );
 
@@ -537,15 +658,28 @@ Builder.registerComponent(
   }
 );
 
+
 Builder.registerComponent(
   dynamic(() => import("./components/ProgressBar/Progressbar")),
   {
     name: "Progressbar",
     inputs: [
-      { name: "type", type: "string" },
-      { name: "percent", type: "string" },
+      {
+        name: "type",
+        type: "string",
+        defaultValue: "LINE",
+        enum: ["LINE", "Circle"],
+      },
+      { name: "percent", type: "number" },
       { name: "vertical", type: "boolean" },
-      { name: "color", type: "string" },
+      { name: "strokeColor", type: "string" },
+      { name: "strokeWidth", type: "number" },
+      {
+        name: "status",
+        type: "string",
+        defaultValue: "red",
+        enum: ["success", "fail", "active"],
+      },
     ],
   }
 );
@@ -603,10 +737,3 @@ Builder.registerComponent(
 //     name: "CenDropdown",
 //   }
 // );
-
-Builder.registerComponent(
-  dynamic(() => import("./components/Overlay/Overlay")),
-  {
-    name: "CenOverlay",
-  }
-);

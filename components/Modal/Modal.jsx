@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Modal, Button, ButtonToolbar, Placeholder } from "rsuite";
 import { useState } from "react";
 const CenModal = (props) => {

@@ -1,10 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
-
+import { SelectPicker } from "rsuite";
+const data = ['Eugenia', 'Bryan', 'Linda', 'Nancy', 'Lloyd', 'Alice', 'Julia', 'Albert'].map(
+  item => ({ label: item, value: item })
+);
 const CenSelectPicker = (props) => {
   return (
     <>
-      <SelectPicker {...props} style={{ width: 224 }} />
+      <SelectPicker block={props.block} appearance={props.appearance} placement={props.placement} searchable={props.searchable} size={props.size} data={data} />
     </>
   );
 };

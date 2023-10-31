@@ -1,6 +1,5 @@
 import { Radio, RadioGroup } from "rsuite";
 import React from "react";
-import PropTypes from "prop-types";
 
 const CenRadio = (props) => {
   return (
