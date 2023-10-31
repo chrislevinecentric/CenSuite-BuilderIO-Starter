@@ -157,6 +157,154 @@ Builder.registerComponent(
     ],
   }
 );
+Builder.registerComponent(
+  dynamic(() => import("./components/RadioTile/RadioTile")),
+  {
+    name: "RadioTileGroup",
+    inputs: [
+      {
+        name: "inline",
+        type: "boolean",
+      },
+      {
+        name: "tiles",
+        type: "list",
+        subFields: [
+          {
+            name: "checked",
+            type: "boolean",
+          },
+          {
+            name: "label",
+            type: "string",
+          },
+          {
+            name: "value",
+            type: "string",
+          },
+          {
+            name: "text",
+            type: "string",
+          },
+          {
+            name: "image",
+            type: "string",
+          },
+          {
+            name: "imagealt",
+            type: "string",
+          },
+          {
+            name: "imagesizewidth",
+            type: "number",
+            defaultValue: "50",
+          },
+        ],
+        defaultValue: [],
+      },
+    ],
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Carousel/Carousel")),
+  {
+    name: "Carousel",
+    inputs: [
+      {
+        name: "autoplay",
+        type: "boolean",
+      },
+      {
+        name: "shape",
+        type: "string",
+        defaultValue: "dot",
+        enum: ["dot", "bar"],
+      },
+      {
+        name: "placement",
+        type: "string",
+        defaultValue: "bottom",
+        enum: ["top", "bottom", "left", "right"],
+      },
+      {
+        name: "slides",
+        type: "list",
+        subFields: [
+          {
+            name: "image",
+            type: "file",
+            allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+          },
+        ],
+        defaultValue: [],
+      },
+    ],
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Button/ButtonGroup")),
+  {
+    name: "Button Group",
+    inputs: [
+      {
+        name: "justified",
+        type: "boolean",
+      },
+      {
+        name: "vertical",
+        type: "boolean",
+      },
+      {
+        name: "size",
+        type: "string",
+        defaultValue: "md",
+        enum: ["xs", "sm", "md", "lg"],
+      },
+      {
+        name: "buttons",
+        type: "list",
+        subFields: [
+          {
+            name: "text",
+            type: "string",
+            defaultValue: "Click me",
+          },
+          {
+            name: "color",
+            type: "string",
+            defaultValue: "red",
+            enum: [
+              "red",
+              "orange",
+              "yellow",
+              "green",
+              "cyan",
+              "blue",
+              "violet",
+            ],
+          },
+          {
+            name: "appearance",
+            type: "string",
+            defaultValue: "primary",
+            enum: ["primary", "ghost", "link", "subtle", "default"],
+          },
+          {
+            name: "loading",
+            type: "boolean",
+          },
+          {
+            name: "block",
+            type: "boolean",
+          },
+        ],
+        defaultValue: [],
+      },
+    ],
+  }
+);
 
 Builder.registerComponent(
   dynamic(() => import("./components/DateRangePicker/DateRangePicker")),
@@ -336,39 +484,6 @@ Builder.registerComponent(
     name: "TagInput",
   }
 );
-Builder.registerComponent(CenForm, {
-  name: "CenForm",
-  inputs: [
-    {
-      name: "inputs",
-      type: "list",
-      subFields: [
-        {
-          name: "label",
-          type: "string",
-        },
-        {
-          name: "formControlName",
-          type: "string",
-        },
-        {
-          name: "HelpText",
-          type: "string",
-        },
-        {
-          name: "placeholder",
-          type: "string",
-        },
-      ],
-      defaultValue: [
-        {
-          label: "input",
-          content: [],
-        },
-      ],
-    },
-  ],
-});
 Builder.registerComponent(CenTable, {
   name: "CenTable",
   inputs: [
