@@ -1,12 +1,13 @@
 import { Builder } from "@builder.io/react";
 import dynamic from "next/dynamic";
-
+import CenForm from "./components/Form/Form";
 // Self contained components
-import CenButtonGroup from "./components/Button/ButtonGroup"
-import CenRadioGroup from "./components/RadioTile/RadioTile"
+import CenButtonGroup from "./components/Button/ButtonGroup";
+import CenRadioGroup from "./components/RadioTile/RadioTile";
 
 CenButtonGroup;
 CenRadioGroup;
+CenForm;
 
 // Simple components
 Builder.registerComponent(
@@ -15,29 +16,29 @@ Builder.registerComponent(
     name: "Button",
     inputs: [
       {
-        name: 'text',
-        type: 'string',
-        defaultValue: 'Click me'
+        name: "text",
+        type: "string",
+        defaultValue: "Click me",
       },
       {
-        name: 'color',
-        type: 'string',
-        defaultValue: 'red',
-        enum: ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet'],
+        name: "color",
+        type: "string",
+        defaultValue: "red",
+        enum: ["red", "orange", "yellow", "green", "cyan", "blue", "violet"],
       },
       {
-        name: 'appearance',
-        type: 'string',
-        defaultValue: 'primary',
-        enum: ['primary', 'ghost', 'link', 'subtle', 'default'],
+        name: "appearance",
+        type: "string",
+        defaultValue: "primary",
+        enum: ["primary", "ghost", "link", "subtle", "default"],
       },
       {
-        name: 'loading',
-        type: 'boolean',
+        name: "loading",
+        type: "boolean",
       },
       {
-        name: 'block',
-        type: 'boolean',
+        name: "block",
+        type: "boolean",
       },
     ],
   }
@@ -50,11 +51,11 @@ Builder.registerComponent(
     inputs: [
       { name: "content", type: "string" },
       {
-        name: 'color',
-        type: 'string',
-        defaultValue: 'red',
-        enum: ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet'],
-      }
+        name: "color",
+        type: "string",
+        defaultValue: "red",
+        enum: ["red", "orange", "yellow", "green", "cyan", "blue", "violet"],
+      },
     ],
   }
 );
@@ -183,13 +184,39 @@ Builder.registerComponent(
 //   }
 // );
 
-Builder.registerComponent(
-  dynamic(() => import("./components/Form/Form")),
-  {
-    name: "Form",
-  }
-);
-
+Builder.registerComponent(CenForm, {
+  name: "CenForm",
+  inputs: [
+    {
+      name: "inputs",
+      type: "list",
+      subFields: [
+        {
+          name: "label",
+          type: "string",
+        },
+        {
+          name: "formControlName",
+          type: "string",
+        },
+        {
+          name: "HelpText",
+          type: "string",
+        },
+        {
+          name: "placeholder",
+          type: "string",
+        },
+      ],
+      defaultValue: [
+        {
+          label: "input",
+          content: [],
+        },
+      ],
+    },
+  ],
+});
 Builder.registerComponent(
   dynamic(() => import("./components/Input/Input")),
   {
@@ -210,17 +237,16 @@ Builder.registerComponent(
     name: "Message",
     inputs: [
       {
-        name: 'type',
-        type: 'string',
-        defaultValue: 'info',
-        enum: ['info', 'success', 'warning', 'error'],
+        name: "type",
+        type: "string",
+        defaultValue: "info",
+        enum: ["info", "success", "warning", "error"],
       },
-      { name: "showIcon", type: 'boolean'},
-      { name: "full", type: 'boolean'},
-      { name: "closable", type: 'boolean'},
+      { name: "showIcon", type: "boolean" },
+      { name: "full", type: "boolean" },
+      { name: "closable", type: "boolean" },
       { name: "headerText", type: "string" },
       { name: "Message", type: "string" },
-    
     ],
   }
 );
@@ -232,23 +258,23 @@ Builder.registerComponent(
     inputs: [
       { name: "modalTitle", type: "string" },
       {
-        name: 'backdrop',
-        type: 'string',
-        defaultValue: 'true',
-        enum: ['static', 'true', 'false'],
+        name: "backdrop",
+        type: "string",
+        defaultValue: "true",
+        enum: ["static", "true", "false"],
       },
       { name: "overflow", type: "boolean" },
       {
-        name: 'color',
-        type: 'string',
-        defaultValue: 'red',
-        enum: ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet'],
+        name: "color",
+        type: "string",
+        defaultValue: "red",
+        enum: ["red", "orange", "yellow", "green", "cyan", "blue", "violet"],
       },
       {
-        name: 'appearance',
-        type: 'string',
-        defaultValue: 'primary',
-        enum: ['primary', 'ghost', 'link', 'subtle', 'default'],
+        name: "appearance",
+        type: "string",
+        defaultValue: "primary",
+        enum: ["primary", "ghost", "link", "subtle", "default"],
       },
       { name: "text", type: "string" },
     ],
@@ -349,6 +375,12 @@ Builder.registerComponent(
   dynamic(() => import("./components/ProgressBar/Progressbar")),
   {
     name: "Progressbar",
+    inputs: [
+      { name: "type", type: "string" },
+      { name: "percent", type: "string" },
+      { name: "vertical", type: "boolean" },
+      { name: "color", type: "string" },
+    ],
   }
 );
 
@@ -373,15 +405,14 @@ Builder.registerComponent(
     name: "Notification",
     inputs: [
       {
-        name: 'type',
-        type: 'string',
-        defaultValue: 'info',
-        enum: ['info', 'success', 'warning', 'error'],
+        name: "type",
+        type: "string",
+        defaultValue: "info",
+        enum: ["info", "success", "warning", "error"],
       },
-      { name: "closable", type: 'boolean'},
+      { name: "closable", type: "boolean" },
       { name: "headerText", type: "string" },
       { name: "Message", type: "string" },
-    
     ],
   }
 );
