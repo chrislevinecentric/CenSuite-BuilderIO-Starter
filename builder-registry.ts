@@ -4,10 +4,11 @@ import CenForm from "./components/Form/Form";
 // Self contained components
 import CenButtonGroup from "./components/Button/ButtonGroup";
 import CenRadioGroup from "./components/RadioTile/RadioTile";
-
+import CenTable from "./components/Table/Table";
 CenButtonGroup;
 CenRadioGroup;
 CenForm;
+CenTable;
 
 // Simple components
 Builder.registerComponent(
@@ -335,14 +336,64 @@ Builder.registerComponent(
     name: "TagInput",
   }
 );
-
-Builder.registerComponent(
-  dynamic(() => import("./components/Table/Table")),
-  {
-    name: "Table",
-  }
-);
-
+Builder.registerComponent(CenForm, {
+  name: "CenForm",
+  inputs: [
+    {
+      name: "inputs",
+      type: "list",
+      subFields: [
+        {
+          name: "label",
+          type: "string",
+        },
+        {
+          name: "formControlName",
+          type: "string",
+        },
+        {
+          name: "HelpText",
+          type: "string",
+        },
+        {
+          name: "placeholder",
+          type: "string",
+        },
+      ],
+      defaultValue: [
+        {
+          label: "input",
+          content: [],
+        },
+      ],
+    },
+  ],
+});
+Builder.registerComponent(CenTable, {
+  name: "CenTable",
+  inputs: [
+    {
+      name: "tabledata",
+      type: "list",
+      subFields: [
+        {
+          name: "columnname",
+          type: "string",
+        },
+        {
+          name: "datakey",
+          type: "string",
+        },
+      ],
+      defaultValue: [
+        {
+          label: "input",
+          content: [],
+        },
+      ],
+    },
+  ],
+});
 Builder.registerComponent(
   dynamic(() => import("./components/Slider/Slider")),
   {

@@ -1,23 +1,26 @@
 import React from "react";
 import { Table } from "rsuite";
+import { mockUsers } from "./mock";
+
 const CenTable = (props) => {
   const { Column, HeaderCell, Cell } = Table;
+  const data = mockUsers(20);
   return (
     <Table
       height={420}
-      data={props.data}
+      data={data}
       bordered
       cellBordered
       autoHeight
       affixHeader
       affixHorizontalScrollbar
     >
-      {props.columnname.map((item) => {
+      {props.tabledata?.map((item, index) => (
         <Column width={50} align="center" fixed resizable>
-          <HeaderCell>{item}</HeaderCell>
-          <Cell dataKey={iten} />
-        </Column>;
-      })}
+          <HeaderCell>{item.columnname}</HeaderCell>
+          <Cell dataKey={iten.datakey} />
+        </Column>
+      ))}
     </Table>
   );
 };
