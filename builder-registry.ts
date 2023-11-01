@@ -110,32 +110,13 @@ Builder.registerComponent(
     name: "Checkpicker",
     inputs: [
       { name: "label", type: "string" },
-      { name: "size", type: "string" },
       { name: "sticky", type: "boolean" },
       {
-        name: "data",
-        type: "list",
-        defaultValue: [
-          "Eugenia",
-          "Bryan",
-          "Linda",
-          "Nancy",
-          "Lloyd",
-          "Alice",
-          "Julia",
-          "Albert",
-          "Louisa",
-          "Lester",
-          "Lola",
-          "Lydia",
-          "Hal",
-          "Hannah",
-          "Harriet",
-          "Hattie",
-          "Hazel",
-          "Hilda",
-        ],
-      },
+        name: "size",
+        type: "string",
+        defaultValue: "md",
+        enum: ["xs", "sm", "md", "lg"],
+      },     
     ],
   }
 );
@@ -490,19 +471,6 @@ Builder.registerComponent(
     name: "TreePicker",
   }
 );
-
-Builder.registerComponent(
-  dynamic(() => import("./components/ToolTip/Tooltip")),
-  {
-    name: "Tooltip",
-    inputs: [
-      { name: "trigger", type: "string" },
-      { name: "text", type: "string" },
-      { name: "buttonText", type: "string" },
-    ],
-  }
-);
-
 Builder.registerComponent(
   dynamic(() => import("./components/Toggle/Toggle")),
   {
@@ -553,12 +521,10 @@ Builder.registerComponent(CenTable, {
     {
       name: "showHeader",
       type: "boolean",
-      defaultValue: "showHeader"
     },
     {
       name: "hover",
       type: "boolean",
-      defaultValue: ""
     },
     {
       name: "wordWrap",
@@ -568,12 +534,6 @@ Builder.registerComponent(CenTable, {
     },
   ],
 });
-Builder.registerComponent(
-  dynamic(() => import("./components/Slider/Slider")),
-  {
-    name: "Slider",
-  }
-);
 Builder.registerComponent(
   dynamic(() => import("./components/SelectPicker/SelectPicker")),
   {
@@ -655,6 +615,19 @@ Builder.registerComponent(
   dynamic(() => import("./components/Radio/Radio")),
   {
     name: "Radio",
+    inputs: [
+      {
+        name: "radio",
+        type: "list",
+        subFields: [
+          {
+            name: "label",
+            type: "string",
+            defaultValue: "Hello World",
+          },
+        ],
+      },
+    ],
   }
 );
 
@@ -683,14 +656,6 @@ Builder.registerComponent(
     ],
   }
 );
-
-Builder.registerComponent(
-  dynamic(() => import("./components/Panel/Panel")),
-  {
-    name: "Panel",
-  }
-);
-
 Builder.registerComponent(
   dynamic(() => import("./components/Pagination/Pagination")),
   {

@@ -2,23 +2,35 @@ import React from "react";
 import { CheckPicker } from "rsuite";
 import { useState } from "react";
 const CenCheckpicker = (props) => {
-  console.log("hellp how are you", props.data);
-   const data =
-     props.data != null &&
-     props.data.map((item) => ({
-       label: item,
-       value: item,
-       role: Math.random() > 0.5 ? "Owner" : "Guest",
-     }));
+  const data = [
+    "Eugenia",
+    "Bryan",
+    "Linda",
+    "Nancy",
+    "Lloyd",
+    "Alice",
+    "Julia",
+    "Albert",
+    "Louisa",
+    "Lester",
+    "Lola",
+    "Lydia",
+    "Hal",
+    "Hannah",
+    "Harriet",
+    "Hattie",
+    "Hazel",
+    "Hilda",
+  ].map((item) => ({ label: item, value: item }));
+
   return (
     <>
       <CheckPicker
         label={props.label}
-         data={data}
+        data={data}
         style={{ width: 224 }}
         size={props.size}
         sticky={props.sticky}
-           disabledItemValues={props.disabledItemValues}
       />
     </>
   );

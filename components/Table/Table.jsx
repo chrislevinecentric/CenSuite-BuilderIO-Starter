@@ -14,8 +14,8 @@ const CenTable = (props) => {
       cellBordered={props.boardered}
       autoHeight={props.autoHeight}
       wordWrap={props.wordWrap}
-      showHeader={props.showHeader}
-      hover={props.hover}
+      showHeader
+      hover
       data={data}
       rowKey="id"
     >

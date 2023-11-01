@@ -9,7 +9,7 @@ import { TagInput } from "rsuite";
 function CenForm(props) {
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <Form>
+    <Form fluid>
       {props.inputs?.map((item, index) => (
         <Form.Group controlId={item.formControlName}>
           <Form.ControlLabel>{item.label}</Form.ControlLabel>
