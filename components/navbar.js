@@ -1,6 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
-import { Nav } from 'rsuite';
+import React from "react";
+import Link from "next/link";
+import { Nav, Button } from "rsuite";
+import { BuilderBlocks, Builder } from "@builder.io/react";
 
 const NavLink = React.forwardRef((props, ref) => {
   const { as, href, ...rest } = props;
@@ -11,18 +12,34 @@ const NavLink = React.forwardRef((props, ref) => {
   );
 });
 
-const Navbar = () => (
-  <Nav>
-    <Nav.Item as={NavLink} href="/">
-      Home
-    </Nav.Item>
-    <Nav.Item as={NavLink} href="/page1">
-      Page 1
-    </Nav.Item>
-    <Nav.Item as={NavLink} href="/page2">
-      Page 2
-    </Nav.Item>
-  </Nav>
+const Navbar = (props) => (
+  <Navbar>
+    <Nav>
+      {props.navitems?.map((item) => {
+        {
+          console.log(item);
+        }
+        <Button>{item.navtext}</Button>;
+      })}
+    </Nav>
+  </Navbar>
 );
+
+Builder.registerComponent(Navbar, {
+  name: "Navbar",
+  inputs: [
+    {
+      name: "navitems",
+      type: "list",
+      subFields: [
+        {
+          name: "navtext",
+          type: "string",
+        },
+      ],
+      defaultValue: [],
+    },
+  ],
+});
 
 export default Navbar;

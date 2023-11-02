@@ -1,21 +1,13 @@
 import React from "react";
-
-const CenNavbar = ({ onSelect, activeKey, ...props }) => {
+import { Navbar, Nav } from "rsuite";
+const CenNavbar = ({ ...props }) => {
+  const [activeKey, setActiveKey] = React.useState(null);
   return (
     <Navbar {...props}>
-      <Navbar.Brand href="#">RSUITE</Navbar.Brand>
-      <Nav onSelect={onSelect} activeKey={activeKey}>
-        {props.navmenu ? (
-          <Nav.Menu title={props.navmenu.title}>
-            {props.navitem.map((item, index) => {
-              <Nav.Item eventKey={index}>{item}</Nav.Item>;
-            })}
-          </Nav.Menu>
-        ) : (
-          props.navitem.map((item, index) => {
-            <Nav.Item eventKey={index}>{item}</Nav.Item>;
-          })
-        )}
+      <Nav onSelect={setActiveKey} activeKey={activeKey}>
+        {props.navitem.map((item, index) => {
+          <Nav.Item eventKey={index}>{item.text}</Nav.Item>;
+        })}
       </Nav>
     </Navbar>
   );

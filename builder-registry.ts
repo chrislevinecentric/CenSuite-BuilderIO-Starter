@@ -3,8 +3,10 @@ import dynamic from "next/dynamic";
 import CenForm from "./components/Form/Form";
 // Self contained components
 import CenTable from "./components/Table/Table";
+import Navbar from "./components/navbar";
 CenForm;
 CenTable;
+Navbar;
 
 // Simple components
 Builder.registerComponent(
@@ -116,7 +118,7 @@ Builder.registerComponent(
         type: "string",
         defaultValue: "md",
         enum: ["xs", "sm", "md", "lg"],
-      },     
+      },
     ],
   }
 );
@@ -551,7 +553,7 @@ Builder.registerComponent(
         name: "appearance",
         type: "string",
         enum: ["default", "subtle"],
-        defaultValue: 'default'
+        defaultValue: "default",
       },
       {
         name: "size",
@@ -563,23 +565,23 @@ Builder.registerComponent(
         name: "placement",
         type: "string",
         enum: [
-          'bottomStart',
-          'bottomEnd',
-          'topStart',
-          'topEnd',
-          'leftStart',
-          'leftEnd',
-          'rightStart',
-          'rightEnd',
-          'auto',
-          'autoVerticalStart',
-          'autoVerticalEnd',
-          'autoHorizontalStart',
-          'autoHorizontalEnd',
-        ],        
-        defaultValue: 'bottomStart'
+          "bottomStart",
+          "bottomEnd",
+          "topStart",
+          "topEnd",
+          "leftStart",
+          "leftEnd",
+          "rightStart",
+          "rightEnd",
+          "auto",
+          "autoVerticalStart",
+          "autoVerticalEnd",
+          "autoHorizontalStart",
+          "autoHorizontalEnd",
+        ],
+        defaultValue: "bottomStart",
       },
-    ]
+    ],
   }
 );
 
@@ -631,7 +633,6 @@ Builder.registerComponent(
   }
 );
 
-
 Builder.registerComponent(
   dynamic(() => import("./components/ProgressBar/Progressbar")),
   {
@@ -682,13 +683,32 @@ Builder.registerComponent(
   }
 );
 
-Builder.registerComponent(
-  dynamic(() => import("./components/NavBar/Navbar")),
-  {
-    name: "Navbar",
-  }
-);
-
+Builder.registerComponent(Navbar, {
+  name: "Navbar",
+  inputs: [
+    {
+      name: "navitem",
+      type: "list",
+      subFields: [
+        {
+          name: "navtext",
+          type: "string",
+          defaultValue: "Home",
+        },
+        {
+          name: "href",
+          type: "string",
+        },
+      ],
+      defaultValue: [
+        {
+          label: "navitem",
+          content: ["Home"],
+        },
+      ],
+    },
+  ],
+});
 Builder.registerComponent(
   dynamic(() => import("./components/navbar")),
   {
